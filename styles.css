@@ -12,16 +12,35 @@ body {
     hsla(34, 40%, 76%, 0.5) 30%,
     hsla(155, 62%, 40%, 0.3)
   );
-  max-width: 1440px;
+  max-width: 1240px;
+  width: 90%;
   margin: 0 auto;
-  padding: 20px;
+  padding-block: 30px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  flex-flow: row wrap;
   align-items: center;
+}
+
+h1 {
+  color: hsla(155, 62%, 40%, 0.8);
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+[data-testid="jobTitle"],
+[data-testid="currentLocation"],
+[data-testid="emailAddress"],
+[data-testid="currentTimeUTC"] {
+  color: rgb(113, 85, 49);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+[data-testid="currentTimeUTC"] > span {
+  color: hsla(155, 62%, 40%, 0.8);
+  font-weight: bold;
 }
 
 .profile-info {
@@ -31,7 +50,7 @@ header {
 }
 
 .profile-image {
-  width: 250px;
+  width: 380px;
   aspect-ratio: 1/1;
 }
 
@@ -64,7 +83,6 @@ header {
   text-decoration: none;
   width: 100%;
   text-align: center;
-  color: hsla(155, 62%, 40%, 0.3);
   color: rgb(169, 36, 36);
   background-color: transparent;
   border-radius: 5px;
@@ -94,10 +112,9 @@ main {
 }
 
 .short-bio p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.5;
   text-align: justify;
-  /* color: hsla(155, 62%, 40%, 0.3); */
 }
 
 footer {
@@ -107,12 +124,9 @@ footer {
   padding: 20px;
 }
 
-@media screen and (max-width: 620px) {
-  body {
-    padding: 0;
-  }
+@media screen and (max-width: 740px) {
   header {
-    flex-flow: column wrap;
+    flex-flow: column-reverse wrap;
     justify-content: center;
     gap: 20px;
   }
@@ -121,17 +135,13 @@ footer {
   }
   .profile-image {
     width: 80%;
-    aspect-ratio: 1/1;
   }
   .profile-image img {
-    border-radius: 30px;
+    border-radius: 10px;
     width: 100%;
     transition: all 0.3s ease-in-out;
   }
   .profile-info {
     text-align: center;
-    /* display: flex;
-    flex-direction: column;
-    gap: 10px; */
   }
 }
