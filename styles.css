@@ -75,7 +75,7 @@ main p {
 }
 .social-links {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
   align-items: start;
